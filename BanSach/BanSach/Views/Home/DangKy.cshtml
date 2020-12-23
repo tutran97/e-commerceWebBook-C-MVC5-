@@ -1,0 +1,158 @@
+﻿@using BanSach.Models
+@model BanSach.Models.RegisterModel
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="menu-account">
+                <h3>
+                    <span>
+                        Tài khoản
+                    </span>
+                </h3>
+                <ul>
+                    <li><a href="/home/dangnhap"><i class="fa fa-sign-in"></i>Đăng nhập</a></li>
+                    <li><a href="/home/dangky"><i class="fa fa-key"></i>Đăng ký</a></li>
+                    <li><a href="/home/dangky"><i class="fa fa-key"></i>Quên mật khẩu</a></li>
+                </ul>
+            </div>
+            <!--thong tin web Trai-->
+            <div class="box-sale-policy ng-scope" ng-controller="moduleController" ng-init="initSalePolicyController('Shop')">
+                <h3><span>Chính sách bán hàng</span></h3>
+                <div class="sale-policy-block">
+                    <ul>
+                        <li>Giao hàng TOÀN QUỐC</li>
+                        <li>Thanh toán khi nhận hàng</li>
+                        <li>Đổi trả trong <span> 3ngày</span></li>
+                        <li>Hoàn ngay tiền mặt</li>
+                        <li>Chất lượng đảm bảo</li>
+                        <li>Miễn phí vận chuyển:<span>Đơn hàng từ 3 món trở lên</span></li>
+                    </ul>
+                </div>
+                <div class="buy-guide">
+                    <h3>Hướng Dẫn Mua Hàng</h3>
+                    <ul>
+                        <li>
+                            Mua hàng trực tiếp tại website
+                            <b class="ng-binding"> http://www.sach.vn</b>
+                        </li>
+                        <li>
+                            Gọi điện thoại <strong class="ng-binding">
+                                0961.421 396
+                            </strong> để mua hàng
+                        </li>
+                        <li>
+                            Mua tại Trung tâm CSKH:<br>
+                            <strong class="ng-binding">65 Đường Huỳnh Thúc Kháng, Bến Nghé, Quận 1, Hồ Chí Minh</strong>
+                            <a href="/home/lienhe" rel="nofollow" target="_blank">Xem Bản Đồ</a>
+                        </li>
+                        <li>
+                            Mua sỉ/buôn xin gọi <strong class="ng-binding">
+                                0961.421 396
+                            </strong> để được
+                            hỗ trợ.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--End-->
+        <!--DANG KÝ-->
+        <div class="col-md-6">
+
+            <!--////////////-->
+            <div class="content">
+                @using (Html.BeginForm(FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        <h1 class="title"><span>Đăng Ký</span></h1>
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TaiKhoan, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.TaiKhoan, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.TaiKhoan, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.MatKhau, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.MatKhau, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.MatKhau, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.NhapLaiMatKhau, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.NhapLaiMatKhau, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.NhapLaiMatKhau, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.HoTen, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.HoTen, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.HoTen, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.GioiTinh, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.DropDownListFor(model => model.GioiTinh, new SelectList(Enum.GetValues(typeof(GioiTinh))), "Gioi tinh", new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.GioiTinh, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.NgaySinh, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.NgaySinh, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.NgaySinh, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.SDT, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.SDT, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.SDT, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.DiaChi, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.TextAreaFor(model => model.DiaChi, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.DiaChi, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Đăng Ký" class="btn btn-default" />
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>

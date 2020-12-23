@@ -1,0 +1,2 @@
+22/6 chu de danh muc fix =true
+fix danh muc

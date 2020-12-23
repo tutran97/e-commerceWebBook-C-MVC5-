@@ -1,0 +1,13 @@
+﻿@model DTO.SachDTO
+@{
+    ViewBag.Title = "Xoa";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<form action="/admin/qlsach/Xoa/@Model.MaSach">
+    <h4>@Model.TenSach</h4>
+    <h5>Xóa Luôn Không!?</h5>
+    <input type="submit" value="OK" />
+    <a href="/Admin/qlsach"><input type="button" value="quay lại!" /></a>
+</form>
+

@@ -1,0 +1,133 @@
+﻿@model BanSach.Models.GioHangHeader
+@{
+    BUS.SachBUS sachBus = new BUS.SachBUS();
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    double tongthanhtien = 0;
+}
+<div class="cart-block">
+    <div class="cart-info table-responsive">
+        <br>
+        <h1 class="title"><span>Giỏ hàng của bạn!</span></h1>
+        <table class="table product-list">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Ảnh</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
+                    <th>xóa</th>
+                </tr>
+            </thead>
+           
+                <!-- ngRepeat: item in OrderDetails -->
+                @foreach (var item in Model.Line)
+                {
+                    <tbody>
+                        <tr ng-repeat="item in OrderDetails" class="ng-scope" id="@("sp"+item.MaSanPham)">
+                        <td>
+                            @item.MaSanPham
+                        </td>
+                            <td class="image">
+                                <a href="/sach/chitietsanpham/@item.MaSanPham"><img style="height:100px" class="img-responsive" src="/Content/NguoDungCssLayout/Uploads/shop292/images/@item.HinhAnh"></a>
+                            </td>
+                            <td class="des">
+                                <h2><a href="/sach/chitietsanpham/@item.MaSanPham" class="ng-binding"><b>@item.TenSanPham</b></a></h2>
+                                <span class="ng-binding"></span>
+                            </td>
+                            <td class="price ng-binding">@(String.Format("{0:#,##0;(£#,##0.00);Nothing}", item.GiaBan))</td>
+                            <td class="quantity">
+                                <h2>@item.SoLuong</h2>
+                            </td>
+                            <td class="amount ng-binding">
+                                @(String.Format("{0:#,##0;(£#,##0.00);Nothing}", (item.GiaBan * item.SoLuong)))
+                               
+                            </td>
+                            <td class="remove">
+                                <i onclick="Delete(@item.MaSanPham)" class="glyphicon glyphicon-trash"></i>
+                            </td>
+                        </tr><!-- end ngRepeat: item in OrderDetails -->
+                    </tbody>
+
+                    tongthanhtien += item.GiaBan * item.SoLuong;
+                }
+            
+        </table>
+    </div>
+
+    <div class="clearfix text-right">
+        <span><b>Tổng thanh toán:</b></span>
+        <span class="pay-price ng-binding">
+            @(String.Format("{0:#,##0;(£#,##0.00);Nothing}", tongthanhtien))
+           
+        </span>
+    </div>
+
+    <div class="button text-right">
+        <a class="btn btn-default" href="/sach" onclick="window.history.back()">Tiếp tục mua hàng</a>
+        @if (Model.Line.Count > 0)//dem co item moi Thanh toan
+        {
+
+
+                    <a class="btn btn-primary" href="/hoadon/index">Tiến hành thanh toán</a>
+            //thong bao
+            @*int soluongbandau = 0;
+            int soluongthaydoi = 0;
+            foreach (var item in Model.Line)
+            {
+                soluongbandau = item.SoLuong;
+                soluongthaydoi = item.SoLuong;
+                if (item.SoLuong >= (sachBus.LaySach(item.MaSanPham).SoLuongTon - item.SoLuong) || item.SoLuong <= (sachBus.LaySach(item.MaSanPham).SoLuongTon - item.SoLuong))//slitemGioHang<=slItemSach-sl itemGioHang
+                {
+                    if (item.SoLuong <= sachBus.LaySach(item.MaSanPham).SoLuongTon)
+                    {
+                        soluongthaydoi = item.SoLuong;
+                    }
+                }
+            }
+            if (soluongbandau == soluongthaydoi)
+            {
+                <script> window.confirm('cập nhật thất bại!')</script>
+            }
+            else
+            {
+                <script> window.confirm('cập nhật thành công!')</script>
+            }*@
+
+        }
+        else
+        {
+            <a hidden class="btn btn-primary" href="/sach/index">giỏ hàng trống!</a>
+        }
+
+
+
+    </div>
+</div>
+<!--XOA ITEM truc tiep-->
+<script>
+    function Delete(id) {
+        if (window.confirm('Ban co muon xoa khong')) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    if (this.responseText == 'True') {
+                        var tr = '#sp' + id;
+                        $(tr).hide();
+                        //them reset lại trang
+                        window.location.href = '/giohang/index';
+
+                    }
+                }
+            };
+            xhttp.open("POST", "/giohang/delete/0", true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send("id=" + id);
+            
+        }
+
+    };
+
+</script>

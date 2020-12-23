@@ -1,0 +1,16 @@
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DTO\bin\Debug\DTO.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DTO\bin\Debug\DTO.pdb
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DTO\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DTO\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DTO\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DTO\bin\Debug\ReportViewerForMvc.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DTO\obj\Debug\DTO.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DTO\obj\Debug\DTO.pdb
+F:\DATN\BanSach\DTO\bin\Debug\DTO.dll
+F:\DATN\BanSach\DTO\bin\Debug\DTO.pdb
+F:\DATN\BanSach\DTO\bin\Debug\Microsoft.ReportViewer.Common.dll
+F:\DATN\BanSach\DTO\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+F:\DATN\BanSach\DTO\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+F:\DATN\BanSach\DTO\bin\Debug\ReportViewerForMvc.dll
+F:\DATN\BanSach\DTO\obj\Debug\DTO.dll
+F:\DATN\BanSach\DTO\obj\Debug\DTO.pdb

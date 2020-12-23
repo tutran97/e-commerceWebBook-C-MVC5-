@@ -1,0 +1,128 @@
+﻿@model BanSach.Models.ThongTinGiaoHangModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-3">
+
+            <script src="~/Content/NguoDungCssLayout/app/services/moduleServices.js"></script>
+            <script src="~/Content/NguoDungCssLayout/app/controllers/moduleController.js"></script>
+            <!--thong tin web Trai-->
+            <div class="box-sale-policy ng-scope" ng-controller="moduleController" ng-init="initSalePolicyController('Shop')">
+                <h3><span>Chính sách bán hàng</span></h3>
+                <div class="sale-policy-block">
+                    <ul>
+                        <li>Giao hàng TOÀN QUỐC</li>
+                        <li>Thanh toán khi nhận hàng</li>
+                        <li>Đổi trả trong <span> 3ngày</span></li>
+                        <li>Hoàn ngay tiền mặt</li>
+                        <li>Chất lượng đảm bảo</li>
+                        <li>Miễn phí vận chuyển:<span>Đơn hàng từ 3 món trở lên</span></li>
+                    </ul>
+                </div>
+                <div class="buy-guide">
+                    <h3>Hướng Dẫn Mua Hàng</h3>
+                    <ul>
+                        <li>
+                            Mua hàng trực tiếp tại website
+                            <b class="ng-binding"> http://www.sach.vn</b>
+                        </li>
+                        <li>
+                            Gọi điện thoại <strong class="ng-binding">
+                                0961.421 396
+                            </strong> để mua hàng
+                        </li>
+                        <li>
+                            Mua tại Trung tâm CSKH:<br>
+                            <strong class="ng-binding">65 Đường Huỳnh Thúc Kháng, Bến Nghé, Quận 1, Hồ Chí Minh</strong>
+                            <a href="/home/lienhe" rel="nofollow" target="_blank">Xem Bản Đồ</a>
+                        </li>
+                        <li>
+                            Mua sỉ/buôn xin gọi <strong class="ng-binding">
+                                0961.421 396
+                            </strong> để được
+                            hỗ trợ.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--END-->
+
+
+        <div class="col-md-9">
+            <form action="/hoadon/index" method="post">
+                <input name="__RequestVerificationToken" type="hidden" value="ixCCb-1jM4IdFBB1LxXYWNXDbrGBBxnm4Vgz2sUb29IxnvHBpQWKPsFPyAuy-AD8Aix0h-cBcGIrxpHngu0VBKsqR4kK7CZwwIO9Uqsa_xE1">                <div class="form-horizontal">
+
+                    <div class="col-md-4 col-sm-12 col-xs-12 payment-step step2">
+                        <h1 class="title"><span>Thanh Toán</span></h1>
+                        <div class="step-preview clearfix">
+                            <h2 class="title">Thông tin thanh toán</h2>
+                            <!-- ngIf: CustomerId>0 -->
+                            <!-- ngIf: CustomerId<=0 -->@using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+
+                                <div class="form-horizontal">
+
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.HoTen, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.HoTen, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.HoTen, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.SDT, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.SDT, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.SDT, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.DiaChi, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.DiaChi, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.DiaChi, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    @*<div class="form-group">
+                                        @Html.LabelFor(model => model.NgayGiao, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.NgayGiao, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.NgayGiao, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>*@
+
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <input type="submit" value="Thanh Toán" class="btn btn-default" />
+                                            <a class="btn btn-default" href="/sach" onclick="window.history.back()">Quay lại mua hàng</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+

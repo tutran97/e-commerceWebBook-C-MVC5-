@@ -1,0 +1,51 @@
+﻿.slideshow {
+    position: relative;
+}
+
+.slide {
+    display: none;
+}
+
+.button {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    font-size: 20px;
+    color: black;
+    background-color: deeppink;
+    padding: 20px;
+}
+
+.buttonlui {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    font-size: 20px;
+    color: black;
+    background-color: deeppink;
+    padding: 20px;
+}
+
+.button:hover {
+    background-color: hotpink;
+}
+
+.buttonlui:hover {
+    background-color: hotpink;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.5
+    }
+
+    to {
+        opacity: 1
+    }
+}
+

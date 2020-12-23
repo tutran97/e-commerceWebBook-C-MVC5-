@@ -1,0 +1,4 @@
+F:\DATN\BanSach\Common\bin\Debug\Common.dll
+F:\DATN\BanSach\Common\bin\Debug\Common.pdb
+F:\DATN\BanSach\Common\obj\Debug\Common.dll
+F:\DATN\BanSach\Common\obj\Debug\Common.pdb

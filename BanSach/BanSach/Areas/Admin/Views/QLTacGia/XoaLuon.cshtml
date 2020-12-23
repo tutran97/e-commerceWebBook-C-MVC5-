@@ -1,0 +1,11 @@
+﻿@model DTO.TacGiaDTO
+@{
+    ViewBag.Title = "XoaLuon";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<form action="/admin/chude/XoaLuon/@Model.MaTacGia">
+    <h4>@Model.TenTacGia</h4>
+    <h5>Xóa Luôn !?</h5>
+    <input type="submit" value="OK" />
+    <a href="/Admin/qltacgia"><input type="button" value="quay lại!" /></a>
+</form>

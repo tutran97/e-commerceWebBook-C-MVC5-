@@ -1,0 +1,111 @@
+﻿@model DTO.KhachHangDTO
+@{
+    ViewBag.Title = "ThongTinKhachHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <!--traI-->
+        <div class="col-md-3">
+            <script src="~/Content/NguoDungCssLayout/app/services/accountServices.js"></script>
+            <script src="~/Content/NguoDungCssLayout/app/controllers/accountController.js"></script>
+            <div class="menu-account ng-scope" ng-controller="accountController">
+                <h3>
+                    <span>
+                        Quản lý cá nhân
+                    </span>
+                </h3>
+                <ul>
+                    <li class="active"><a href="@Model.MaKH"><i class="glyphicon glyphicon-user"></i>Thông tin tài khoản</a></li>
+                    <li><a href="/hoadon/donhangcuatoi/@Model.MaKH"><i class="glyphicon glyphicon-list-alt"></i>Đơn hàng của tôi</a></li>
+                    <li><a href="/home/doithongtin/@Model.MaKH"><i class="fa fa-key"></i>Thay đổi mật khẩu</a></li>
+                    <li><a href="/home/dangxuat" ng-click="signOut()"><i class="glyphicon glyphicon-log-out"></i>Thoát</a></li>
+                </ul>
+            </div>
+            <!--Thong tin web-->
+            <div class="box-sale-policy ng-scope" ng-controller="moduleController" ng-init="initSalePolicyController('Shop')">
+                <h3><span>Chính sách bán hàng</span></h3>
+                <div class="sale-policy-block">
+                    <ul>
+                        <li>Giao hàng TOÀN QUỐC</li>
+                        <li>Thanh toán khi nhận hàng</li>
+                        <li>Đổi trả trong <span>15 ngày</span></li>
+                        <li>Hoàn ngay tiền mặt</li>
+                        <li>Chất lượng đảm bảo</li>
+                        <li>Miễn phí vận chuyển:<span>Đơn hàng từ 3 món trở lên</span></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <!--Phai-->
+        <div class="col-md-9">
+
+
+            <script type="text/javascript">
+                $(".link-site-more").hover(function () { $(this).find(".s-c-n").show(); }, function () { $(this).find(".s-c-n").hide(); });
+            </script>
+            <script src="~/Content/NguoDungCssLayout/app/services/accountServices.js"></script>
+            <script src="~/Content/NguoDungCssLayout/app/controllers/accountController.js"></script>
+            <div class="comunication-content clearfix ng-scope" ng-controller="accountController" ng-init="initPersonalController()">
+                <h1 class="title"><span>Thông tin của bạn!</span></h1>
+                <!-- ngIf: IsError -->
+                <!-- ngIf: IsSuccess -->
+                <!-- ngIf: InValid -->
+                <div class="col-md-8 col-md-offset-2 col-xs-12 col-sm-12 col-xs-offset-0 col-sm-offset-0">
+                    <form class="form-horizontal ng-pristine ng-valid ng-valid-required" ng-submit="update()">
+                        <h2>Thông tin tài khoản</h2>
+                        <div class="form-group">
+                            <label for="Email" class="col-sm-3 control-label">Email</label>
+                            <div class="col-sm-9">
+                                <label class="control-label ng-binding">@Model.Email</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="Email" class="col-sm-3 control-label">Mật khẩu</label>
+                            <div class="col-sm-9">
+                                <label class="control-label">****</label>
+                                <a href="/home/doithongtin/@Model.MaKH"><i class="fa fa-edit"></i></a>
+                            </div>
+                        </div>
+
+                        <h2>Thông tin cá nhân</h2>
+                        <div class="form-group">
+                            <label for="Name" class="col-sm-3 control-label">Họ tên</label>
+                            <div class="col-sm-9">
+                                <label class="control-label ng-binding">@Model.HoTen</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Giới tính</label>
+                            <div class="col-sm-9">
+                                <label class="control-label ng-binding">@Model.GioiTinh</label>
+                            </div>
+                        </div>
+                        <div class="form-group form-inline">
+                            <label for="" class="col-sm-3 control-label">Ngày sinh</label>
+                            <div class="col-sm-9">
+                                <label class="control-label ng-binding">@Model.NgaySinh.ToString("dd/MM/yyyy")</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">Điện thoại</label>
+                            <div class="col-sm-9">
+                                <label class="control-label ng-binding">@Model.DienThoai</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">Địa chỉ</label>
+                            <div class="col-sm-9">
+                                <label class="control-label ng-binding">@Model.DiaChi</label>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

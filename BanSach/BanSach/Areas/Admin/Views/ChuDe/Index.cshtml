@@ -1,0 +1,98 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<DTO.ChuDeDTO>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    int stt = 1;
+}
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="myorder-content clearfix">
+                <h1 class="title"><span>Quản Lí Chủ Đề</span></h1>
+                <a class="btn btn-default btn-add-cart" href="/Admin/ChuDe/ThemChuDe">Thêm Chủ Đề</a>
+                <div class="myorder-block">
+                    <div class="table-responsive clearfix myorder-info">
+                        <!--tim kiem-->
+                            <input id="txtSearch" type="text" name="searchString" /><!--name = bien truyen vao controler-->
+                            <button onclick="search()">tìm kiếm</button>
+                        <!---->
+                        <table class="table table-mycart">
+                            <thead>
+                                <tr>
+                                    <th>stt</th>
+                                    <th>ID</th>
+                                    <th>Tên Chủ Đề</th>
+                                    <th>Chức Năng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@stt</td>
+                                        <td>@item.MaChuDe</td>
+                                        <td>@item.TenChuDe</td>
+                                        <td>
+                                            <ul>
+                                                <li style="float:left;"><a class="btn btn-default btn-add-cart" href="/admin/chude/sua/@item.MaChuDe">sửa</a></li>
+                                                @if (@item.TrangThai == true)
+                                                {
+                                                    <li><a class="btn btn-default btn-add-cart" href="/admin/chude/xoa/@item.MaChuDe">xoá</a></li>
+                                                }
+                                                <li><a class="btn btn-default btn-add-cart" href="/admin/chude/XoaLuon/@item.MaChuDe">xoá vĩnh viễn</a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    stt++;
+
+                                }
+
+                            </tbody>
+
+                        </table>
+                        <!--PHÂN TRANG-->
+                        <div class="navigation">
+                            <ul class="pagination">
+                                <!--nut Lui-->
+                                <li>
+                                    <a href="?page=1" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a href="?page=1">Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount</a></li>
+                                <!--nut next-->
+                                <li>
+                                    <a href="?page=@Model.PageCount" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                                <!--so trang-->
+                                <li> @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page, @timkiem = @ViewBag.timkiem })) </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--JS TIM KIEM-->
+<script>
+    var link = '/sach ? timkiem =&chude=1&tacgia, int ? nxb, int ? page';
+
+    function search() {
+        window.location.href = '/admin/chude?timkiem=' + document.getElementById('txtSearch').value;
+        //alert(window.location.href);
+    }
+
+</script>
+
+
+<!---->
+

@@ -1,0 +1,57 @@
+﻿@model BanSach.Areas.Admin.Models.NgayThongKeModel
+
+@using ReportViewerForMvc;
+@{
+    Layout =null;
+}
+
+@*<head>
+    <link href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-datepicker.css" rel="stylesheet" />
+</head>*@
+
+@using (Html.BeginForm("Report", "ThongKe", FormMethod.Post))
+{
+    <div style=" display: block;float: left;width: 145px;" class="form-group input-group-sm">
+        @Html.LabelFor(model => model.NgayBatDau)
+        @Html.EditorFor(model => model.NgayBatDau, new { @class = "form-control datepicker" })
+        @Html.ValidationMessageFor(model => model.NgayBatDau)
+    </div>
+    <div style="WIDTH: 145px;margin-left: 148px;" class="form-group input-group-sm">
+        @Html.LabelFor(model => model.NgayKetThuc)
+        @Html.EditorFor(model => model.NgayKetThuc, new { @class = "form-control datepicker"})
+        @Html.ValidationMessageFor(model => model.NgayKetThuc)
+    </div>
+    <button style="width: 145px;height: 30px;" type="submit">XEM</button>
+    <button style="width: 149px;height: 30px;" type="submit"><a href="/Admin/thongke/Index">QUAY LẠI</a></button>
+}
+
+@if (ViewBag.Report !=null)
+{
+    @Html.ReportViewer(ViewBag.Report as Microsoft.Reporting.WebForms.ReportViewer, new { @style = "width: -webkit-fill-available; height:-webkit-fill-available;" }) @*display report*@
+}
+
+
+
+@*<script>
+    $("#NgayBatDau").datepicker().datepicker("setDate", new Date());
+</script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/bootstrap.js"></script>
+<script src="~/Scripts/respond.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate-vsdoc.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>
+<script src="~/Scripts/bootstrap-datetimepicker.js"></script>
+<script src="~/Scripts/moment-with-locales.js"></script>
+<script src="~/Scripts/moment-with-locales.min.js"></script>
+<script src="~/Scripts/moment.js"></script>
+<script src="~/Scripts/moment.min.js"></script>*@
+
+

@@ -1,0 +1,121 @@
+﻿
+@{
+    ViewBag.Title = "lienhe";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-12">
+
+    <div class="breadcrumb clearfix">
+        <ul>
+            <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home">
+                <a title="Đến trang chủ" href="/" itemprop="url"><span itemprop="title">Trang chủ</span></a>
+            </li>
+            <li class="icon-li"><strong>Liên hệ</strong> </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        $(".link-site-more").hover(function () { $(this).find(".s-c-n").show(); }, function () { $(this).find(".s-c-n").hide(); });
+    </script>
+
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyBO93-_2pxx4UBTNduADxfoWpsFrHAFKsA&amp;sensor=true" type="text/javascript"></script>
+    <script src="/app/services/contactServices.js"></script>
+    <script src="/app/controllers/contactController.js"></script>
+    <!--Begin-->
+    <div class="contact-content clearfix ng-scope" ng-controller="contactController" ng-init="initController('Shop','Maps')">
+        <h1 class="title">
+            <span>
+                Thông tin liên hệ
+            </span>
+        </h1>
+        <div class="contact-block clearfix">
+            <div class="row">
+                <div class="col-md-7">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5130961938653!2d106.69907441411642!3d10.771958462223331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f40c7a0f411%3A0xe272a9c70ba4a66e!2zNjUgxJDGsOG7nW5nIEh14buzbmggVGjDumMgS2jDoW5nLCBC4bq_biBOZ2jDqSwgUXXhuq1uIDEsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1560580432058!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-info">
+                        <div class="docs"><b class="name ng-binding">Quang Tú Book</b></div>
+                        <div class="docs ng-binding">
+                            <i class="fa fa-map-marker"></i>
+                            <b>HCM: </b> 65 Đường Huỳnh Thúc Kháng, Bến Nghé, Quận 1, Hồ Chí Minh
+                        </div>
+
+                        <div class="docs ng-binding">
+                            <i class="fa fa-mobile"></i>
+                            <b>Hotline</b> 0989.250 270
+                        </div>
+                        <div class="docs">
+                            <i class="fa fa-envelope"></i>
+                            <a href="mailto:thanhtubook@gmail.com" class="ng-binding">quangtubook@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <script type="text/javascript">
+        var map;
+        var infowindow;
+        var marker = new Array();
+        var old_id = 0;
+        var infoWindowArray = new Array();
+        var infowindow_array = new Array();
+        function initialize() {
+            var defaultLatLng = new google.maps.LatLng(10.845064529472292, 106.636744831799320);
+
+            var myOptions = { zoom: 16, center: defaultLatLng, scrollwheel: true, mapTypeId: google.maps.MapTypeId.ROADMAP };
+            map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+            map.setCenter(defaultLatLng);
+
+            if (Maps.length <= 0) {
+                var arrLatLng = new google.maps.LatLng(10.845064529472292, 106.636744831799320);
+                var myHtml = "<div class='map-description'> <strong>" + firstMap.Name + "</strong><br/>Địa chỉ: <span>" + firstMap.Address + "</span><br/>Điện thoại: <span>" + firstMap.Phone + "</span><br/></div>";
+                infoWindowArray[firstMap.Id] = myHtml;
+                loadMarker(arrLatLng, infoWindowArray[firstMap.Id], firstMap.Id);
+            }
+
+            $.each(Maps, function (index, it) {
+                var arrLatLng = new google.maps.LatLng(it.PosX, it.PosY);
+                var myHtml = "<div class='map-description'> <strong>" + it.Name + "</strong><br/>Địa chỉ: <span>" + it.Address + "</span><br/>Điện thoại: <span>" + it.Phone + "</span><br/></div>";
+                infoWindowArray[it.Id] = myHtml;
+                loadMarker(arrLatLng, infoWindowArray[it.Id], it.Id);
+            });
+
+
+            moveToMaker(firstMap.Id);
+        }
+        function loadMarker(myLocation, myInfoWindow, id) {
+            marker[id] = new google.maps.Marker({ position: myLocation, map: map, visible: true });
+            var popup = myInfoWindow;
+            infowindow_array[id] = new google.maps.InfoWindow({ content: popup });
+            google.maps.event.addListener(marker[id], 'click', function () {
+                if (id == old_id) return;
+                if (old_id > 0)
+                    infowindow_array[old_id].close();
+                infowindow_array[id].open(map, marker[id]);
+                old_id = id;
+            });
+            google.maps.event.addListener(infowindow_array[id], 'closeclick', function () { old_id = 0; });
+        }
+        function moveToMaker(id) {
+            var location = marker[id].position;
+            map.setCenter(location);
+            if (old_id > 0)
+                infowindow_array[old_id].close();
+            infowindow_array[id].open(map, marker[id]);
+            old_id = id;
+        }
+    </script>
+    <!--End-->
+    <script type="text/javascript">
+        var firstMap = { "Id": 35, "ShopId": 292, "Name": "Đà Lạt Flower", "Address": "33 Phan Tây Hồ, P.7, Q.Phú Nhuận, Tp.HCM", "Phone": "", "PosX": 10.826899037002041, "PosY": 106.628150939941400, "Index": 0, "Inactive": false };
+        var Maps = [{ "Id": 35, "ShopId": 292, "Name": "Đà Lạt Flower", "Address": "33 Phan Tây Hồ, P.7, Q.Phú Nhuận, Tp.HCM", "Phone": "", "PosX": 10.826899037002041, "PosY": 106.628150939941400, "Index": 0, "Inactive": false }];
+        window.Maps = Maps;
+        window.Shop = { "Name": "Đà Lạt Flower", "Email": "info@runtime.vn", "Phone": "0989.250 270", "Logo": "/Uploads/shop292/images/logo%20a.png", "Fax": null, "Website": "http://www.runtime.vn", "Hotline": "0989.250 270", "Address": "33 Phan Tây Hồ, P.7, Q.Phú Nhuận, Tp.HCM", "Fanpage": "https://www.facebook.com/runtime.vn", "Google": null, "Facebook": "https://www.facebook.com/runtime.vn", "Youtube": null, "Twitter": null, "IsBanner": true, "IsFixed": true, "BannerImage": "/Uploads/shop292/images/DLF.jpg" };
+        $(document).ready(function () {
+            initialize();
+        });
+    </script>
+</div>

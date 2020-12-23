@@ -1,0 +1,134 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<BanSach.Models.SachDetail>
+@{
+    var chude = (DTO.ChuDeDTO)ViewBag.chude;//chude phai = ten ham()
+    ViewBag.Title = chude.TenChuDe;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="title"><span>@chude.TenChuDe</span></h1>
+<div class="container">
+    <div class="row">
+
+        </div>
+        <div class="col-md-12">
+            <link href="~/Content/NguoDungCssLayout/Scripts/owl-carousel/owl.carousel.css" rel="stylesheet" />
+            <link href="~/Content/NguoDungCssLayout/Scripts/owl-carousel/owl.theme.css" rel="stylesheet" />
+            <script src="~/Content/NguoDungCssLayout/Scripts/owl-carousel/owl.carousel.min.js"></script>
+            <script src="~/Content/NguoDungCssLayout/app/services/productServices.js"></script>
+            <script src="~/Content/NguoDungCssLayout/app/controllers/productController.js"></script>
+            <!--SANPHAM-->
+            <section class="product-content clearfix">
+                <nav class="navbar navbar-default product-filter">
+                    <!--TIM KIEM-->
+                    <div>
+                        <div class="col-md-4">
+                            <input id="txtSearch" type="text" name="searchString" /><!--name = bien truyen vao controler-->
+                            <button type="button" id="btnSearch">tìm kiếm</button>
+                        </div>
+                    </div>
+                    <!--sap xep-->
+                    <div class="sort">
+                        <span>Sắp xếp</span>
+                        <select class="selectProductSort" id="lbsort" onchange="window.location.href = this.options[this.selectedIndex].value">
+                            <option value="?find=macdinh">Mặc định</option>
+                            <option value="?find=tangdan">Gi&#225; tăng dần</option>
+                            <option value="?find=giamdan">Gi&#225; giảm dần</option>
+                            <option value="?find=ngaymoi">ngày mới nhất</option>
+                            <option value="?find=ngaycu">ngày củ nhất</option>
+                        </select>
+                    </div>
+                </nav>
+                <!--SAN PHAM-->
+
+                <div class="product-block product-grid clearfix">
+                    @foreach (var item in Model)
+                    {
+
+                        
+                    <div class="col-md-3 col-sm-3 col-xs-6 product-resize product-item-box">
+
+                        <div class="product-item">
+                            <div class="image image-resize">
+                                <a href="/Sach/ChiTietSanPham/@item.MaSach" title="@item.TenSach">
+                                    <img src="\Content\NguoDungCssLayout\Uploads\shop292\images\@item.AnhBia" alt="@item.TenSach" class="img-responsive lazy-img" />
+                                </a>
+                            </div>
+                            <div class="right-block">
+                                <h2 class="name">
+                                    <a  style="font-weight: bold;color: red;text-overflow: ellipsis;white-space: nowrap;width: 100%;overflow: hidden;display: block;" href="ChiTietSanPham/@item.MaSach" title="@item.TenSach">@item.TenSach</a>
+                                </h2>
+                                <div class="rating">
+                                    <div class="rating-1">
+                                        <span class="rating-img">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="price">
+                                    <span style="text-decoration:line-through;" class="price-new"> @(String.Format("{0:#,##0;(£#,##0.00);Nothing}", item.GiaCu)) VNĐ</span><br />
+                                    <span class="price-new"> @(String.Format("{0:#,##0;(£#,##0.00);Nothing}", item.GiaBan)) VNĐ</span>
+                                </div>
+                                <div class="button">
+                                    <a class="btn btn-default btn-add-cart" href="/Sach/ChiTietSanPham/@item.MaSach">Mua</a>
+                                    <!--<a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(9535,1)">Mua</a>-->
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    }
+
+                </div>
+                <!---->
+                <!--PHÂN TRANG-->
+                <div class="navigation">
+                    <ul class="pagination">
+                        <!--nut Lui-->
+                        <li>
+                            <a href="?page=1" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a id="page" href="?page=1">Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount</a></li>
+                        <!--nut next-->
+                        <li>
+                            <a href="?page=@Model.PageCount" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                        <!--so trang-->
+                        <li> @Html.PagedListPager(Model, page => Url.Action("chude", new { page = page, find = Session["find"].ToString(), @timkiem = @ViewBag.timkiem })) </li>
+                    </ul>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+<!---->
+<!--js ham timkiem va sapxep-->
+<script>
+    $(document).ready(function () {
+        $('#lbsort option[value="' + '@Session["sort"]' + '"]').attr("selected", true);
+
+        var link = '/sach/chude/@chude.MaChuDe ? timkiem =&chude=1&tacgia, int ? nxb, int ? page';
+        //function search() {
+        //    //alert(window.location.href);
+        //}
+        $("#btnSearch").click(function () {
+            window.location.href = '/sach/chude/@chude.MaChuDe?timkiem=' + document.getElementById('txtSearch').value + '&page=null&find=@Session["find"]';
+        });
+    });
+</script>
+<!--JS TIM KIEM-->
+@*<script>
+    var link = '/sach/chude/@chude.MaChuDe ? timkiem =&chude=1&tacgia, int ? nxb, int ? page';
+
+    function search() {
+        window.location.href = '/sach/chude/@chude.MaChuDe?timkiem=' + document.getElementById('txtSearch').value;
+        //alert(window.location.href);
+    }
+
+</script>*@
+<!---->

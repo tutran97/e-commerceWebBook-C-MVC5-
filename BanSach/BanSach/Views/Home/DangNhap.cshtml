@@ -1,0 +1,78 @@
+﻿@model BanSach.Models.LoginModel
+
+@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main">
+    <div class="container">
+        <div class="row">
+            <!--TRAI-->
+            <div class="col-md-3">
+                @*@RenderPage("Trang cshtml")*@
+                <div>
+                    <div class="menu-account">
+                        <h3>
+                            <span>
+                                QUẢN LÍ TÀI KHOẢN
+                            </span>
+                        </h3>
+                        <ul>
+                            <li><a href="/home/dangky"><i class="fas fa-book"></i>Đăng Ký </a></li>
+                            <li><a href="#"><i class="fa fa-key"></i>Quên Mật Khẩu</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!--PHAI-->
+            <div class="col-md-6">
+                <div class="login-content clearfix ng-scope" ng-controller="accountController" ng-init="initController()">
+                    <h1 class="title"><span>Đăng nhập</span></h1>
+                    <div class="col-md-6 col-md-offset-3 col-xs-12 col-sm-12 col-xs-offset-0 col-sm-offset-0">
+                        @using (Html.BeginForm()@*, new { htmlAttributes = new { @class = "form-horizontal ng-pristine ng-valid-email ng-invalid ng-invalid-required" } }*@)
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group">
+                                <label for="Email" class="col-sm-4 control-label">Tài Khoản</label>
+                                <div class="col-sm-8">
+                                    @Html.EditorFor(model => model.TaiKhoan, new { htmlAttributes = new { @class = "form-control ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required" } })
+                                    @Html.ValidationMessageFor(model => model.TaiKhoan, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="Password" class="col-sm-4 control-label">Mật khẩu</label>
+                                <div class="col-sm-8">
+                                    @Html.EditorFor(model => model.MatKhau, new { htmlAttributes = new { @class = "form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" } })
+                                    @Html.ValidationMessageFor(model => model.MatKhau, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-4 col-sm-8">
+                                    <button type="submit" class="btn btn-default">Đăng nhập</button>
+                                    @*<a style="float:left;" class="btn btn-facebook" href="/DangNhapFcebook">Đăng Nhập Bằng Facebook</a>*@
+
+                                </div>
+
+                            </div>
+                        }
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DAO\bin\Debug\DAO.dll.config
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DAO\bin\Debug\DAO.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DAO\bin\Debug\DAO.pdb
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DAO\bin\Debug\DTO.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DAO\bin\Debug\EntityFramework.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DAO\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DAO\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DAO\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DAO\bin\Debug\ReportViewerForMvc.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DAO\bin\Debug\DTO.pdb
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DAO\bin\Debug\EntityFramework.xml
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DAO\obj\Debug\DAO.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\DAO\obj\Debug\DAO.pdb
+F:\DATN\BanSach\DAO\bin\Debug\DAO.dll.config
+F:\DATN\BanSach\DAO\bin\Debug\DAO.dll
+F:\DATN\BanSach\DAO\bin\Debug\DAO.pdb
+F:\DATN\BanSach\DAO\bin\Debug\DTO.dll
+F:\DATN\BanSach\DAO\bin\Debug\EntityFramework.dll
+F:\DATN\BanSach\DAO\bin\Debug\EntityFramework.SqlServer.dll
+F:\DATN\BanSach\DAO\bin\Debug\Microsoft.ReportViewer.Common.dll
+F:\DATN\BanSach\DAO\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+F:\DATN\BanSach\DAO\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+F:\DATN\BanSach\DAO\bin\Debug\ReportViewerForMvc.dll
+F:\DATN\BanSach\DAO\bin\Debug\DTO.pdb
+F:\DATN\BanSach\DAO\bin\Debug\EntityFramework.xml
+F:\DATN\BanSach\DAO\bin\Debug\EntityFramework.SqlServer.xml
+F:\DATN\BanSach\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+F:\DATN\BanSach\DAO\obj\Debug\DAO.dll
+F:\DATN\BanSach\DAO\obj\Debug\DAO.pdb

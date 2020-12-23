@@ -1,0 +1,189 @@
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\ApplicationInsights.config
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\csc.exe
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\csc.exe.config
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\csc.rsp
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\csi.exe
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\csi.rsp
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\System.AppContext.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\vbc.exe
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\vbc.exe.config
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\vbc.rsp
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\VBCSCompiler.exe
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\BanSach.dll.config
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\BanSach.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\BanSach.pdb
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Antlr3.Runtime.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\BotDetect.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\BotDetect.Web.UI.Mvc.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\BUS.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\DAO.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\DTO.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\EntityFramework.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\EntityFramework.SqlServer.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Facebook.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Microsoft.AI.Web.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Microsoft.ApplicationInsights.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Newtonsoft.Json.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\PagedList.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\PagedList.Mvc.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\ReportViewerForMvc.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\System.Data.SQLite.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\System.Web.Helpers.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\System.Web.Mvc.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\System.Web.Optimization.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\System.Web.Razor.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\System.Web.WebPages.Deployment.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\System.Web.WebPages.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\System.Web.WebPages.Razor.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\WebGrease.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\BUS.pdb
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\DAO.pdb
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\DTO.pdb
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\EntityFramework.xml
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\EntityFramework.SqlServer.xml
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Facebook.xml
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\PagedList.xml
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\PagedList.Mvc.xml
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\System.Data.SQLite.xml
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\System.Web.Helpers.xml
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\System.Web.Mvc.xml
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\System.Web.Optimization.xml
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\System.Web.Razor.xml
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\System.Web.WebPages.xml
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\System.Web.WebPages.Deployment.xml
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\System.Web.WebPages.Razor.xml
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Antlr3.Runtime.pdb
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Newtonsoft.Json.xml
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Microsoft.ApplicationInsights.xml
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\bin\Microsoft.AI.Web.xml
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\obj\Debug\BanSach.csprojResolveAssemblyReference.cache
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\obj\Debug\RdlCompile.cache
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\obj\Debug\RdlCompile.compiled
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\obj\Debug\BanSach.dll
+C:\Users\minhq\OneDrive\Desktop\New folder (2)\BanSach\BanSach\obj\Debug\BanSach.pdb
+F:\DATN\BanSach\BanSach\bin\ApplicationInsights.config
+F:\DATN\BanSach\BanSach\bin\roslyn\csc.exe
+F:\DATN\BanSach\BanSach\bin\roslyn\csc.exe.config
+F:\DATN\BanSach\BanSach\bin\roslyn\csc.rsp
+F:\DATN\BanSach\BanSach\bin\roslyn\csi.exe
+F:\DATN\BanSach\BanSach\bin\roslyn\csi.rsp
+F:\DATN\BanSach\BanSach\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\DATN\BanSach\BanSach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\DATN\BanSach\BanSach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\DATN\BanSach\BanSach\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\DATN\BanSach\BanSach\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\DATN\BanSach\BanSach\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\DATN\BanSach\BanSach\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\DATN\BanSach\BanSach\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\DATN\BanSach\BanSach\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\DATN\BanSach\BanSach\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\DATN\BanSach\BanSach\bin\roslyn\System.AppContext.dll
+F:\DATN\BanSach\BanSach\bin\roslyn\System.Collections.Immutable.dll
+F:\DATN\BanSach\BanSach\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\DATN\BanSach\BanSach\bin\roslyn\System.IO.FileSystem.dll
+F:\DATN\BanSach\BanSach\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\DATN\BanSach\BanSach\bin\roslyn\System.Reflection.Metadata.dll
+F:\DATN\BanSach\BanSach\bin\roslyn\vbc.exe
+F:\DATN\BanSach\BanSach\bin\roslyn\vbc.exe.config
+F:\DATN\BanSach\BanSach\bin\roslyn\vbc.rsp
+F:\DATN\BanSach\BanSach\bin\roslyn\VBCSCompiler.exe
+F:\DATN\BanSach\BanSach\bin\roslyn\VBCSCompiler.exe.config
+F:\DATN\BanSach\BanSach\bin\BanSach.dll.config
+F:\DATN\BanSach\BanSach\bin\BanSach.dll
+F:\DATN\BanSach\BanSach\bin\BanSach.pdb
+F:\DATN\BanSach\BanSach\bin\Antlr3.Runtime.dll
+F:\DATN\BanSach\BanSach\bin\BotDetect.dll
+F:\DATN\BanSach\BanSach\bin\BotDetect.Web.UI.Mvc.dll
+F:\DATN\BanSach\BanSach\bin\BUS.dll
+F:\DATN\BanSach\BanSach\bin\DAO.dll
+F:\DATN\BanSach\BanSach\bin\DTO.dll
+F:\DATN\BanSach\BanSach\bin\EntityFramework.dll
+F:\DATN\BanSach\BanSach\bin\EntityFramework.SqlServer.dll
+F:\DATN\BanSach\BanSach\bin\Facebook.dll
+F:\DATN\BanSach\BanSach\bin\Microsoft.AI.Agent.Intercept.dll
+F:\DATN\BanSach\BanSach\bin\Microsoft.AI.DependencyCollector.dll
+F:\DATN\BanSach\BanSach\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\DATN\BanSach\BanSach\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\DATN\BanSach\BanSach\bin\Microsoft.AI.Web.dll
+F:\DATN\BanSach\BanSach\bin\Microsoft.AI.WindowsServer.dll
+F:\DATN\BanSach\BanSach\bin\Microsoft.ApplicationInsights.dll
+F:\DATN\BanSach\BanSach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\DATN\BanSach\BanSach\bin\Microsoft.ReportViewer.Common.dll
+F:\DATN\BanSach\BanSach\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+F:\DATN\BanSach\BanSach\bin\Microsoft.ReportViewer.WebForms.DLL
+F:\DATN\BanSach\BanSach\bin\Microsoft.SqlServer.Types.dll
+F:\DATN\BanSach\BanSach\bin\Microsoft.Web.Infrastructure.dll
+F:\DATN\BanSach\BanSach\bin\Newtonsoft.Json.dll
+F:\DATN\BanSach\BanSach\bin\PagedList.dll
+F:\DATN\BanSach\BanSach\bin\PagedList.Mvc.dll
+F:\DATN\BanSach\BanSach\bin\ReportViewerForMvc.dll
+F:\DATN\BanSach\BanSach\bin\System.Data.SQLite.dll
+F:\DATN\BanSach\BanSach\bin\System.Web.Helpers.dll
+F:\DATN\BanSach\BanSach\bin\System.Web.Mvc.dll
+F:\DATN\BanSach\BanSach\bin\System.Web.Optimization.dll
+F:\DATN\BanSach\BanSach\bin\System.Web.Razor.dll
+F:\DATN\BanSach\BanSach\bin\System.Web.WebPages.Deployment.dll
+F:\DATN\BanSach\BanSach\bin\System.Web.WebPages.dll
+F:\DATN\BanSach\BanSach\bin\System.Web.WebPages.Razor.dll
+F:\DATN\BanSach\BanSach\bin\WebGrease.dll
+F:\DATN\BanSach\BanSach\bin\BUS.pdb
+F:\DATN\BanSach\BanSach\bin\DAO.pdb
+F:\DATN\BanSach\BanSach\bin\DAO.dll.config
+F:\DATN\BanSach\BanSach\bin\DTO.pdb
+F:\DATN\BanSach\BanSach\bin\EntityFramework.xml
+F:\DATN\BanSach\BanSach\bin\EntityFramework.SqlServer.xml
+F:\DATN\BanSach\BanSach\bin\Facebook.xml
+F:\DATN\BanSach\BanSach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\DATN\BanSach\BanSach\bin\PagedList.xml
+F:\DATN\BanSach\BanSach\bin\PagedList.Mvc.xml
+F:\DATN\BanSach\BanSach\bin\System.Data.SQLite.xml
+F:\DATN\BanSach\BanSach\bin\System.Data.SQLite.dll.config
+F:\DATN\BanSach\BanSach\bin\System.Web.Helpers.xml
+F:\DATN\BanSach\BanSach\bin\System.Web.Mvc.xml
+F:\DATN\BanSach\BanSach\bin\System.Web.Optimization.xml
+F:\DATN\BanSach\BanSach\bin\System.Web.Razor.xml
+F:\DATN\BanSach\BanSach\bin\System.Web.WebPages.xml
+F:\DATN\BanSach\BanSach\bin\System.Web.WebPages.Deployment.xml
+F:\DATN\BanSach\BanSach\bin\System.Web.WebPages.Razor.xml
+F:\DATN\BanSach\BanSach\bin\Antlr3.Runtime.pdb
+F:\DATN\BanSach\BanSach\bin\Newtonsoft.Json.xml
+F:\DATN\BanSach\BanSach\bin\Microsoft.ApplicationInsights.xml
+F:\DATN\BanSach\BanSach\bin\Microsoft.AI.DependencyCollector.xml
+F:\DATN\BanSach\BanSach\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\DATN\BanSach\BanSach\bin\Microsoft.AI.WindowsServer.xml
+F:\DATN\BanSach\BanSach\bin\Microsoft.AI.Web.xml
+F:\DATN\BanSach\BanSach\obj\Debug\BanSach.csprojResolveAssemblyReference.cache
+F:\DATN\BanSach\BanSach\obj\Debug\RdlCompile.cache
+F:\DATN\BanSach\BanSach\obj\Debug\RdlCompile.compiled
+F:\DATN\BanSach\BanSach\obj\Debug\BanSach.dll
+F:\DATN\BanSach\BanSach\obj\Debug\BanSach.pdb

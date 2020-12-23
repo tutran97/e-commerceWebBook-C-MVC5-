@@ -1,0 +1,84 @@
+﻿
+@{
+    BUS.SachBUS sach = new BUS.SachBUS();
+    BUS.DonHangBUS donhang = new BUS.DonHangBUS();
+
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    //soluongsachKho
+    var soluongsachkho = 0;
+
+    var DSsach = sach.LayDanhSach();
+    foreach(var item in DSsach)
+    {
+        soluongsachkho += item.SoLuongTon;
+    }
+    //soluongsachDaBan va tong ThuNhap
+    var soluongsachdaban = 0;
+    double TongDanhThu=0;
+    var DSchitietDH = donhang.LayDSChiTietHoaDon();
+    foreach(var item in DSchitietDH)
+    {
+        soluongsachdaban += item.SoLuong;
+        var thanhtien = item.SoLuong * item.DonGia;
+
+        TongDanhThu += thanhtien;
+    }
+
+    //soluonghoadon
+    var soluonghoadon = donhang.LayDanhSach().Count;
+    var DShoadon = donhang.LayDanhSach();
+    var soluonghoadonchuagiao = 0;
+    var soluonghoadondagiao = 0;
+    foreach (var item in DShoadon)
+    {
+        if(item.TinhTrangGiaoHang==true)
+        {
+            soluonghoadonchuagiao += 1;
+        }
+        else if(item.TinhTrangGiaoHang == false)
+        {
+            soluonghoadondagiao += 1;
+        }
+    }
+
+
+}
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-9">
+            <div class="myorder-content clearfix">
+                <h1 class="title"><span>Thống Kê!</span></h1>
+                <div class="myorder-block">
+                    <div class="table-responsive clearfix myorder-info">
+                        <table class="table table-mycart">
+                            <thead>
+                                <tr>
+
+                                    <th>Số Lượng Sách Kho</th>
+                                    <th>Số Lượng Sách Đã Bán</th>
+                                    <th>Số Lượng hóa Đơn</th>
+                                    <th>Hóa Đơn Chưa Giao</th>
+                                    <th>Hóa Đơn Đã Giao</th>
+                                    <th>Tổng Danh Thu</th>
+                                   
+                                </tr>
+                            </thead>
+                            
+                            <tr>
+                                <td>@soluongsachkho</td>
+                                <td>@soluongsachdaban</td>
+                                <td>@soluonghoadon</td>
+                                <td>@soluonghoadonchuagiao</td>
+                                <td>@soluonghoadondagiao</td>
+                                <td>@(String.Format("{0:#,##0;(£#,##0.00);Nothing}", TongDanhThu))</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

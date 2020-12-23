@@ -1,0 +1,106 @@
+﻿@model List<DTO.ChiTietDonHangDTO>
+@{
+    
+    ViewBag.Title = "XemChiTietDonHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    double tongthanhtien = 0;
+}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-3">
+
+            <script src="~/Content/NguoDungCssLayout/app/services/moduleServices.js"></script>
+            <script src="~/Content/NguoDungCssLayout/app/controllers/moduleController.js"></script>
+            <!--thong tin web Trai-->
+            <div class="box-sale-policy ng-scope" ng-controller="moduleController" ng-init="initSalePolicyController('Shop')">
+                <h3><span>Chính sách bán hàng</span></h3>
+                <div class="sale-policy-block">
+                    <ul>
+                        <li>Giao hàng TOÀN QUỐC</li>
+                        <li>Thanh toán khi nhận hàng</li>
+                        <li>Đổi trả trong <span> 3ngày</span></li>
+                        <li>Hoàn ngay tiền mặt</li>
+                        <li>Chất lượng đảm bảo</li>
+                        <li>Miễn phí vận chuyển:<span>Đơn hàng từ 3 món trở lên</span></li>
+                    </ul>
+                </div>
+                <div class="buy-guide">
+                    <h3>Hướng Dẫn Mua Hàng</h3>
+                    <ul>
+                        <li>
+                            Mua hàng trực tiếp tại website
+                            <b class="ng-binding"> http://www.sach.vn</b>
+                        </li>
+                        <li>
+                            Gọi điện thoại <strong class="ng-binding">
+                                0961.421 396
+                            </strong> để mua hàng
+                        </li>
+                        <li>
+                            Mua tại Trung tâm CSKH:<br>
+                            <strong class="ng-binding">65 Đường Huỳnh Thúc Kháng, Bến Nghé, Quận 1, Hồ Chí Minh</strong>
+                            <a href="/home/lienhe" rel="nofollow" target="_blank">Xem Bản Đồ</a>
+                        </li>
+                        <li>
+                            Mua sỉ/buôn xin gọi <strong class="ng-binding">
+                                0961.421 396
+                            </strong> để được
+                            hỗ trợ.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--END-->
+
+
+        <div class="col-md-9">
+            <div class="myorder-content clearfix">
+                <h1 class="title"><span>Chi Tiết Đơn Hàng Của Bạn!</span></h1>
+                <div class="myorder-block">
+                    <div class="table-responsive clearfix myorder-info">
+                        <table class="table table-mycart">
+                            <thead>
+                                <tr>
+
+                                    <th>Mã đơn hàng</th>
+                                    <th>Mã Sách</th>
+                                    <th>Tên Sách</th>
+                                    <th>Số Lượng</th>
+                                    <th>Đơn Gía</th>
+                                    <th>Thành tiền</th>
+                                    
+                                </tr>
+                            </thead>
+                            @foreach (var item in Model)
+                            {
+                                var sach = new BUS.SachBUS().LaySach(@item.MaSach);
+                                <tbody>
+                                    <tr>
+                                        <td>@item.MaDonHang</td>
+                                        <td>@item.MaSach</td>
+                                        <td>@sach.TenSach</td>
+                                        <td>@item.SoLuong</td>
+                                        <td>@(String.Format("{0:#,##0;(£#,##0.00);Nothing}", item.DonGia))</td>
+                                        <td>@(String.Format("{0:#,##0;(£#,##0.00);Nothing}", (item.DonGia * item.SoLuong)))</td>
+                                    </tr>
+                                </tbody>
+                                tongthanhtien += item.DonGia * item.SoLuong;
+                                
+                            }
+                        </table>
+
+                    </div>
+                    <div class="clearfix text-right">
+                        <span><b>Tổng thanh toán:</b></span>
+                        <span class="pay-price ng-binding">
+                            @(String.Format("{0:#,##0;(£#,##0.00);Nothing}", tongthanhtien))
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

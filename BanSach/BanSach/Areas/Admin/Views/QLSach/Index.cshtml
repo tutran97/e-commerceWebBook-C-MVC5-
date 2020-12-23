@@ -1,0 +1,142 @@
+﻿
+@using PagedList.Mvc;
+@model PagedList.IPagedList<BanSach.Models.SachDetail>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    int stt = 1;
+
+}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-9">
+            <div class="myorder-content clearfix">
+                <h1 class="title"><span>Quản Lí Sách!</span></h1>
+                <div class="myorder-block">
+                    <div class="table-responsive clearfix myorder-info">
+                        <a style="float:left;" class="btn btn-default btn-add-cart" href="/Admin/qlsach/themsach">Thêm</a>
+                        <!--tim kiem-->
+                        <div>
+                            <div class="col-md-4">
+                                <input id="txtSearch" type="text" value="@ViewBag.timkiem" name="searchString" /><!--name = bien truyen vao controler-->
+                                <button type="button" id="btnSearch">tìm kiếm</button>
+                            </div>
+                        </div>
+                        <!--sap xep-->
+                        <div style="margin-left:700px;" class="sort">
+                            <span>Sắp xếp</span>
+                            <select style="height:25px;" class="selectProductSort" id="lbsort" onchange="window.location.href = this.options[this.selectedIndex].value">
+                                <option value="?find=macdinh">Mặc định</option>
+                                <option value="?find=tangdan">Gi&#225; tăng dần</option>
+                                <option value="?find=giamdan">Gi&#225; giảm dần</option>
+                                <option value="?find=ngaymoi">ngày mới nhất</option>
+                                <option value="?find=ngaycu">ngày củ nhất</option>
+                            </select>
+                        </div>
+                        <!---->
+                        <table class="table table-mycart">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Tên Sách</th>
+                                    <th>Ảnh</th>
+                                    <th>Chủ Đề</th>
+                                    <th>Nhà Xuất Bản</th>
+                                    <th>Tác Giả</th>
+                                    <th>Ngày</th>
+                                    <th>Số Lượng tồn</th>
+                                    <th>Gía Gốc</th>
+                                    <th>Gía Bán</th>
+                                    <th>Mô Tả</th>
+                                    <th>Chức Năng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.MaSach</td>
+                                        <td>@item.TenSach</td>
+                                        <td>
+                                            <img style="width:50px" src="~/Content/NguoDungCssLayout/Uploads/shop292/images/@item.AnhBia" />
+                                        </td>
+                                        <td>@item.ChuDe</td>
+                                        <td>@item.NhaXuatBan</td>
+                                        <td>@item.TacGia</td>
+                                        <td>@item.NgayCapNhat.ToString("dd/MM/yyyy")</td>
+                                        <td>@item.SoLuongTon</td>
+                                        <td>@(String.Format("{0:#,##0;(£#,##0.00);Nothing}", item.GiaCu))</td>
+                                        <td>@(String.Format("{0:#,##0;(£#,##0.00);Nothing}", item.GiaBan))</td>
+                                        <td><textarea cols="25" rows="3" readonly>@item.MoTa</textarea></td>
+                                        <td>
+                                            <ul>
+                                                <li><a class="btn btn-default btn-add-cart" href="/admin/qlsach/sua/@item.MaSach">sửa</a></li>
+                                                <li><a class="btn btn-default btn-add-cart" href="/admin/qlsach/xoa/@item.MaSach">xoá</a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    stt++;
+
+                                }
+
+                            </tbody>
+
+                        </table>
+                        <!--PHÂN TRANG-->
+                        <div class="navigation">
+                            <ul class="pagination">
+                                <!--nut Lui-->
+                                <li>
+                                    <a href="?page=1" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a id="page" href="?page=1">Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount</a></li>
+                                <!--nut next-->
+                                <li>
+                                    <a href="?page=@Model.PageCount" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                                <!--so trang-->
+                                <li> @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page, find = Session["find"].ToString(), @timkiem = @ViewBag.timkiem })) </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--js ham timkiem va sapxep-->
+<script>
+    $(document).ready(function () {
+        $('#lbsort option[value="' + '@Session["sort"]' + '"]').attr("selected", true);
+
+        var link = '/admin/qlsach ? timkiem =&chude=1&tacgia, int ? nxb, int ? page';
+        //function search() {
+        //    //alert(window.location.href);
+        //}
+        $("#btnSearch").click(function () {
+            window.location.href = '/admin/qlsach?timkiem=' + document.getElementById('txtSearch').value + '&page=null&find=@Session["find"]';
+        });
+    });
+</script>
+<!--JS TIM KIEM-->
+@*<script>
+    var link = '/sach ? timkiem =&chude=1&tacgia, int ? nxb, int ? page';
+
+    function search() {
+        window.location.href = '/admin/qlsach?timkiem=' + document.getElementById('txtSearch').value;
+        //alert(window.location.href);
+    }
+
+</script>*@
+
+
+<!---->
